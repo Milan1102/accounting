@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../Style/style.css">
+    <meta charset="UTF-8">
+    <title>Розрахунок чеків</title>
+</head>
+<body>
+    <header>
+        <a href="../index.html">Головна</a>
+        <a href="calculator.html">Паливо</a>
+        <a href="">Контакти</a>
+    </header>
+    <form id="transaction-form">
+        <h1>Розрахунок чеків</h1> 
+        <label>
+            Знижка:
+            <input type="number" id="sale" step="0.01" value="5">
+        </label>
+        <label>
+            Сумма:
+            <input type="number" step="0.01" id="amount">
+        </label>
+        <label>
+            Літри:
+            <input type="number" id="litrs" step="0.01">
+        </label>
+        <button type="submit">Додати</button>
+    </form>
+
+    <h2>Історія операцій</h2>
+    <ul id="transaction-list"></ul>
+
+    <p id="total-display">Загальна сума: 0.00</p>
+    
+    <button id="clear-all">Очистити все</button>
+    <input type="month" id="month-select">
+    <button id="save-month">Зберегти місяць</button>
+    <button id="month-date">Збережені Місяці</button>
+    <div id="saved-months" class="hidden"></div>
+
+    <script src="../Scripts/calculation.js"></script>
+</body>
+</html>

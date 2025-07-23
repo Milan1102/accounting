@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href="Style/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <a href="index.html">Головна</a>
+        <a href="Pages/calculator.html">Паливо</a>
+        <a href="">Контакти</a>
+    </header>
+        <h1>Мій Облік</h1>
+    <form id="entry-form">
+        <label>
+            Тип:
+            <select name="" id="entry-type">
+                <option value="Доход">Дохід</option>
+                <option value="Розход">Витрата</option>
+            </select>
+        </label> 
+        <br><br>
+        <label>
+            Катеагорія:
+            <input type="text" id="entry-category" placeholder="Наприклад нафта">
+        </Label>
+        <br><br>
+        <label>
+            Сумма:
+            <input type="number" id="entry-amount" step="0.01">
+        </label>
+        <br><br>
+        <label >
+            Дата:
+            <input type="date" id="entry-date">
+        </label>
+        <br><br>
+        <button type="submit">Добавити</button>
+    </form>
+    <hr>
+    <h2>Історія Операцій</h2>
+    <ul id="entry-list"></ul>
+    
+
+    <footer></footer>
+    <script src="Scripts/main-script.js"></script>
+</body>
+</html>
