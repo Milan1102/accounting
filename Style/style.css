@@ -121,3 +121,25 @@ header a + a::before {
     border: 1px solid #ccc;
     box-sizing: border-box;
 }
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        border-radius: 0;
+    }
+    
+    header a {
+        padding: 12px 0;
+    }
+    
+    header a:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        right: 25%;
+        left: 25%;
+        top: auto;
+        bottom: 0;
+        height: 1px;
+        width: 50%;
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+}
