@@ -10,15 +10,15 @@
     <header>
         <a href="index.html">Головна</a>
         <a href="Pages/calculator.html">Паливо</a>
-        <a href="">Контакти</a>
+        <a href="">DPH</a>
     </header>
         <h1>Мій Облік</h1>
     <form id="entry-form">
         <label>
             Тип:
             <select name="" id="entry-type">
-                <option value="Доход">Дохід</option>
-                <option value="Розход">Витрата</option>
+                <option value="Дохід">Дохід</option>
+                <option value="Витрата">Витрата</option>
             </select>
         </label> 
         <br><br>
@@ -46,6 +46,11 @@
 
     <footer></footer>
     <script src="Scripts/main-script.js"></script>
+  
+  <!-- Библиотеки -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script>
+    window.jsPDF = window.jspdf.jsPDF; // Важно для работы!
+  </script>
 </body>
-
 </html>
