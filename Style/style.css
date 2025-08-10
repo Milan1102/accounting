@@ -24,7 +24,10 @@ form label {
     margin-bottom: 10px;
 }
 
-input[type="number"] {
+input[type="number"],
+input[type="month"],
+input[type="text"],
+input[type="date"] {
     width: 100%;
     padding: 8px;
     margin-top: 4px;
@@ -41,40 +44,76 @@ button {
     margin: 5px;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 button:hover {
     background-color: #2980b9;
 }
 
-#transaction-list {
+/* Стили для списка транзакций */
+#entry-list {
     list-style: none;
     padding-left: 0;
+    margin-top: 20px;
 }
 
-#transaction-list li {
+#entry-list li {
     background: #e2f1ff;
-    padding: 10px;
-    margin-bottom: 5px;
+    padding: 12px 15px;
+    margin-bottom: 8px;
     border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
-#total-display {
-    font-weight: bold;
-    font-size: 18px;
-    text-align: center;
-    margin-top: 20px;
+/* Стили для кнопки удаления */
+#entry-list li button {
+    margin: 0;
+    padding: 5px 10px;
+    background-color: #e74c3c;
 }
-.hidden{
-    display: none;
+
+#entry-list li button:hover {
+    background-color: #c0392b;
 }
-#saved-months{ 
-    margin-top: 20px;
-    background: #f8f8f8;
+
+/* Контейнер для фильтров */
+.filters-container {
+    background: #fff;
     padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
 }
+
+.filters-container label {
+    margin: 0;
+    font-weight: bold;
+}
+
+/* Стили для кнопки экспорта */
+.export-btn {
+    background-color: #27ae60;
+    margin-left: auto;
+}
+
+.export-btn:hover {
+    background-color: #2ecc71;
+}
+
+/* Заголовок для истории операций */
+.transaction-history-title {
+    margin-top: 30px;
+    color: #2c3e50;
+}
+
 /* Для header */
 header {
     background: #2c3e50;
@@ -88,8 +127,8 @@ header a {
     color: white;
     text-decoration: none;
     padding: 15px 20px;
-    flex: 1; /* Растягиваем на все доступное пространство */
-    text-align: center; /* Центрируем текст */
+    flex: 1;
+    text-align: center;
     transition: background-color 0.3s ease;
     position: relative;
 }
@@ -109,18 +148,6 @@ header a + a::before {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-
-/* Для формы в index.html */
-#entry-form select, 
-#entry-form input[type="text"],
-#entry-form input[type="date"] {
-    width: 100%;
-    padding: 8px;
-    margin-top: 4px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-}
 @media (max-width: 600px) {
     header {
         flex-direction: column;
@@ -142,4 +169,15 @@ header a + a::before {
         width: 50%;
         background-color: rgba(255, 255, 255, 0.3);
     }
+
+    .filters-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .export-btn {
+        margin-left: 0;
+        margin-top: 10px;
+    }
 }
+
