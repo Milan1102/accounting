@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <title>Доходи та витрати</title>
+  <link rel="stylesheet" href="../Style/style.css">
+
+  <style>
+    input, button {
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="../index.html">Головна</a>
+  <a href="calculator.html">Паливо</a>
+  <a href="finance.html">Фінанси</a>
+</header>
+
+<h1>Доходи / витрати</h1>
+
+<form id="entry-form">
+
+  <!-- 📅 ВЫБОР МЕСЯЦА -->
+  <label>
+    Місяць:
+    <input type="month" id="finance-month">
+  </label>
+  <br><br>
+
+  <label>
+    Тип:
+    <select id="entry-type">
+      <option value="Дохід">Дохід</option>
+      <option value="Витрата">Витрата</option>
+    </select>
+  </label>
+  <br><br>
+
+  <label>
+    Категорія:
+    <input type="text" id="entry-category" placeholder="Напр. Bolt, Мийка">
+  </label>
+  <br><br>
+
+  <label>
+    Сума:
+    <input type="text" id="entry-amount" inputmode="decimal">
+  </label>
+  <br><br>
+
+  <label>
+    Дата:
+    <input type="date" id="entry-date">
+  </label>
+  <br><br>
+
+  <button type="submit">Додати</button>
+</form>
+
+<hr>
+
+<h2>Історія операцій</h2>
+<ul id="entry-list"></ul>
+
+<script src="../Scripts/main-script.js"></script>
+</body>
+</html>

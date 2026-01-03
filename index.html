@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <title>Мій облік</title>
+  <link rel="stylesheet" href="Style/style.css">
+
+  <style>
+    .dashboard {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      margin: 10px 0;
+      font-size: 16px;
+    }
+
+    .row.total {
+      font-size: 18px;
+      font-weight: bold;
+      border-top: 1px solid #ddd;
+      padding-top: 10px;
+    }
+
+    .income { color: #27ae60; }
+    .expense { color: #c0392b; }
+
+    .actions a {
+      display: block;
+      margin: 10px 0;
+      text-align: center;
+      background: #3498db;
+      color: white;
+      padding: 12px;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="index.html">Головна</a>
+  <a href="Pages/calculator.html">Паливо</a>
+  <a href="Pages/finance.html">Фінанси</a>
+</header>
+
+<h1>Мій облік</h1>
+
+<!-- 📅 Выбор месяца -->
+<div class="dashboard">
+  <div class="row">
+    <span>Місяць</span>
+    <input type="month" id="main-month">
+  </div>
+</div>
+
+<!-- 📊 Сводка -->
+<div class="dashboard">
+  <h2>Підсумок</h2>
+
+
+  <div class="row">
+    <span>Доходи</span>
+    <span class="income" id="income-total">0.00</span>
+  </div>
+
+  <div class="row">
+    <span>Витрати</span>
+    <span class="expense" id="expense-total">0.00</span>
+  </div>
+
+  <div class="row">
+    <span>Паливо</span>
+    <span id="fuel-total">0.00</span>
+  </div>
+
+  <div class="row total">
+    <span>Баланс</span>
+    <span id="balance-total">0.00</span>
+  </div>
+</div>
+<div class="dashboard">
+  <h2>Категорії</h2>
+  <ul id="category-stats"></ul>
+</div>
+
+
+<!-- 🔘 Действия -->
+<div class="dashboard actions">
+  <a href="Pages/finance.html">➕ Додати дохід / витрату</a>
+  <a href="Pages/calculator.html">➕ Додати паливо</a>
+  
+
+</div>
+
+<script src="Scripts/analytics.js"></script>
+<script src="Scripts/index.js"></script>
+
+</body>
+</html>
